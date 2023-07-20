@@ -98,11 +98,11 @@ def create_url(d: Date, prefix: str):
     month = month_str(d)
     # another url break in Apr 2021 - we assume the URL will persist
     if d >= Date(2021, 1):
-        return f"{base_url}/{year}/WEO{month}{year}{prefix}.ashx"
+        return f"{base_url}/{year}/WEO{month}{year}{prefix}.xls"
     # url break in Oct 2020
     if d >= Date(2020, 2):
         period_marker = period_str(d)
-        return f"{base_url}/{year}/{period_marker}/WEO{month}{year}{prefix}.xls"
+        return f"{base_url}/{year}/WEO{month}{year}{prefix}.xls"
     # earliest files
     return f"{base_url}/{year}/WEO{month}{year}{prefix}.xls"
 
